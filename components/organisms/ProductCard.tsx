@@ -24,7 +24,7 @@ export default function ProductCard({
   return (
     <div className="bg-white rounded-2xl p-4 shadow-sm hover:shadow transition flex flex-col items-center text-center">
         <ProductImage src={imageUrl} alt={name} isFavorited={isFavorited} />
-        <Text size="sm" weight="bold" className="uppercase mb-2">{name}</Text>
+        <Text size="sm" className="uppercase mb-2 text-normal text-gray-500 font-semibold">{name}</Text>
         <PriceDisplay price={price} installment={installment} />
         <Link href={href}>
         <Button>COMPRAR</Button>

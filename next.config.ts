@@ -1,16 +1,16 @@
-import type { NextConfig } from 'next';
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'magento.runningland.com.br',
-        pathname: '/**',
+        hostname: 'magento.puro',
+        pathname: '/media/**',
       },
     ],
+    unoptimized: true, 
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

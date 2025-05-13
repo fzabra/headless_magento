@@ -9,12 +9,12 @@ interface ProductImageProps {
 
 export default function ProductImage({ src, alt, isFavorited }: ProductImageProps) {
   return (
-    <div className="relative w-full mb-4 flex items-center justify-center">
+    <div className="relative w-full mb-4 flex items-center justify-center lg:max-w-[350px] aspect-[1/1]">
       <Image
         src={src}
         alt={alt}
-        width={200}
-        height={200}
+        fill
+        sizes="(min-width: 1024px) 350px, 100vw"
         className="object-contain"
       />
       <div className="absolute top-2 right-2">
@@ -23,3 +23,4 @@ export default function ProductImage({ src, alt, isFavorited }: ProductImageProp
     </div>
   );
 }
+
