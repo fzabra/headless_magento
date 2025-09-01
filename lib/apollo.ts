@@ -2,8 +2,8 @@ import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
 
 const GRAPHQL_URI =
   process.env.NEXT_PUBLIC_MAGENTO_GRAPHQL ||
-  process.env.NEXT_PUBLIC_MAGENTO_GRAPHQL_ENDPOINT || // fallback se existir
-  '/api/m2/graphql'; // só se você tiver rewrite
+  process.env.NEXT_PUBLIC_MAGENTO_GRAPHQL_ENDPOINT ||
+  '/api/m2/graphql';
 
 export const apolloClient = new ApolloClient({
   link: new HttpLink({

@@ -2,7 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
 
-  // Proxy para o Magento (evita CORS e porta exposta no client)
   async rewrites() {
     return [
       {
@@ -16,13 +15,11 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'magento247.ddev.site', // <-- sem porta aqui
-        port: '33001',                    // <-- porta aqui
+        hostname: 'magento247.ddev.site', 
+        port: '33001',
         pathname: '/media/**',
       },
     ],
-    // Se usar unoptimized: true, remotePatterns não tem efeito.
-    // unoptimized: true,
   },
 };
 
